@@ -11,8 +11,7 @@ cmake ^
     -DCMAKE_BUILD_TYPE=Release               ^
     ..\..
 
-cmake --build . --config Release --target ALL_BUILD
-cmake --build . --config Release --target ZERO_CHECK
+cmake --build . --config Release
 
 copy libmetis\Release\metis.lib %LIBRARY_BIN%
 copy programs\Release\cmpfillin.exe %LIBRARY_LIB%
