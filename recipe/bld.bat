@@ -2,7 +2,7 @@ MKDIR build\windows
 CD build\windows
 
 cmake ^
-    -G "%CMAKE_GENERATOR%" ^
+    -G "NMake Makefiles" ^
     -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%" ^
     -DCMAKE_PREFIX_PATH="%LIBRARY_PREFIX%" ^
     -DBUILD_SHARED_LIBS=yes ^
