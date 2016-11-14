@@ -14,3 +14,4 @@ dir
 
 cmake --build . --config Release --target ALL_BUILD
 cmake --build . --config Release --target ZERO_CHECK
+cmake --build . --config Release --target install
