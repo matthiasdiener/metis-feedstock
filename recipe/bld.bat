@@ -17,18 +17,20 @@ cmake --build . --config Release --target ZERO_CHECK
 
 dir
 
-dir programs
+dir programs\Release
 
-dir libmetis
+dir libmetis\Release
 
-dir include
+dir include\Release
 
-move ..\..\libmetis\libmetis.a %LIBRARY_BIN%
-move ..\..\programs\cmpfillin %LIBRARY_LIB%
-move ..\..\programs\gpmetis %LIBRARY_LIB%
-move ..\..\programs\graphchk %LIBRARY_LIB%
-move ..\..\programs\m2gmetis %LIBRARY_LIB%
-move ..\..\programs\ndmetis %LIBRARY_LIB%
-move ..\..\programs\mpmetis %LIBRARY_LIB%
-move ..\..\include\metis.h %LIBRARY_INC%
-move ..\..\include\gklib_tls.h %LIBRARY_INC%
+dir ..\..
+
+move libmetis\Release\libmetis.a %LIBRARY_BIN%
+move programs\Release\cmpfillin %LIBRARY_LIB%
+move programs\Release\gpmetis %LIBRARY_LIB%
+move programs\Release\graphchk %LIBRARY_LIB%
+move programs\Release\m2gmetis %LIBRARY_LIB%
+move programs\Release\ndmetis %LIBRARY_LIB%
+move programs\Release\mpmetis %LIBRARY_LIB%
+move include\Release\metis.h %LIBRARY_INC%
+move include\Release\gklib_tls.h %LIBRARY_INC%
