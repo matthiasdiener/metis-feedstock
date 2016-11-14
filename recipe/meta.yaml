@@ -20,7 +20,7 @@ build:
 
 requirements:
   build:
-    - cmake
+    - cmake  # [not win]
     - toolchain
     - python  # [win]
 
