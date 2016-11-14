@@ -2,13 +2,13 @@ MKDIR build\windows
 CD build\windows
 
 cmake ^
-    -G "NMake Makefiles"                   ^
-	-DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX%  ^
-	-DCMAKE_INSTALL_BINDIR=%LIBRARY_BIN%     ^
-	-DCMAKE_INSTALL_LIBDIR=%LIBRARY_LIB%     ^
-	-DCMAKE_INSTALL_INCLUDEDIR=%LIBRARY_INC% ^
-	-DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX%     ^
-	-DCMAKE_BUILD_TYPE=Release               ^
+    -G "%CMAKE_GENERATOR%"                   ^
+    -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX%  ^
+    -DCMAKE_INSTALL_BINDIR=%LIBRARY_BIN%     ^
+    -DCMAKE_INSTALL_LIBDIR=%LIBRARY_LIB%     ^
+    -DCMAKE_INSTALL_INCLUDEDIR=%LIBRARY_INC% ^
+    -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX%     ^
+    -DCMAKE_BUILD_TYPE=Release               ^
     ..\..
 
 cmake --build . --config Release --target ALL_BUILD
