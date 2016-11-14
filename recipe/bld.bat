@@ -14,4 +14,15 @@ dir
 
 cmake --build . --config Release --target ALL_BUILD
 cmake --build . --config Release --target ZERO_CHECK
+
 dir
+
+move libmetis/libmetis.a %LIBRARY_BIN%
+move programs/cmpfillin %LIBRARY_LIB%
+move programs/gpmetis %LIBRARY_LIB%
+move programs/graphchk %LIBRARY_LIB%
+move programs/m2gmetis %LIBRARY_LIB%
+move programs/ndmetis %LIBRARY_LIB%
+move programs/mpmetis %LIBRARY_LIB%
+move include/metis.h %LIBRARY_INC%/
+move include/gklib_tls.h %LIBRARY_INC%/
