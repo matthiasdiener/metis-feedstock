@@ -17,6 +17,12 @@ cmake --build . --config Release --target ZERO_CHECK
 
 dir
 
+dir programs
+
+dir libmetis
+
+dir include
+
 move libmetis/libmetis.a %LIBRARY_BIN%
 move programs/cmpfillin %LIBRARY_LIB%
 move programs/gpmetis %LIBRARY_LIB%
