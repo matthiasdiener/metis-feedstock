@@ -10,29 +10,13 @@ cmake ..\.. ^
 
 ECHO VS files have been generated in build\windows
 
-dir
-
 cmake --build . --config Release --target ALL_BUILD
 cmake --build . --config Release --target ZERO_CHECK
 
-dir
-
-dir programs\Release
-
-dir libmetis\Release
-
-dir include
-
-dir ..\..
-
 move libmetis\Release\metis.lib %LIBRARY_BIN%
-
 move programs\Release\cmpfillin.exe %LIBRARY_LIB%
 move programs\Release\gpmetis.exe %LIBRARY_LIB%
 move programs\Release\graphchk.exe %LIBRARY_LIB%
 move programs\Release\m2gmetis.exe %LIBRARY_LIB%
 move programs\Release\ndmetis.exe %LIBRARY_LIB%
 move programs\Release\mpmetis.exe %LIBRARY_LIB%
-
-move include\Release\metis.h %LIBRARY_INC%
-move include\Release\gklib_tls.h %LIBRARY_INC%
