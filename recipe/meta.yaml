@@ -29,13 +29,13 @@ test:
     - gpmetis -h  # [unix]
     - m2gmetis -h  # [unix]
     - test -f $PREFIX/include/metis.h  # [unix]
-    - %LIBRARY_BIN%\graphchk.exe  # [win]
-    - %LIBRARY_BIN%\cmpfillin.exe -h  # [win]
-    - %LIBRARY_BIN%\mpmetis.exe -h  # [win]
-    - %LIBRARY_BIN%\gpmetis.exe -h  # [win]
-    - %LIBRARY_BIN%\ndmetis.exe -h  # [win]
-    - %LIBRARY_BIN%\gpmetis.exe -h  # [win]
-    - %LIBRARY_BIN%\m2gmetis.exe -h  # [win]
+    - %LIBRARY_BIN%\\graphchk.exe  # [win]
+    - %LIBRARY_BIN%\\cmpfillin.exe -h  # [win]
+    - %LIBRARY_BIN%\\mpmetis.exe -h  # [win]
+    - %LIBRARY_BIN%\\gpmetis.exe -h  # [win]
+    - %LIBRARY_BIN%\\ndmetis.exe -h  # [win]
+    - %LIBRARY_BIN%\\gpmetis.exe -h  # [win]
+    - %LIBRARY_BIN%\\m2gmetis.exe -h  # [win]
 
 about:
   home: http://glaros.dtc.umn.edu/gkhome/metis/metis/overview
