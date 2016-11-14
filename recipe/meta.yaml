@@ -21,14 +21,21 @@ requirements:
 
 test:
   commands:
-    - graphchk
-    - cmpfillin -h
-    - mpmetis -h
-    - gpmetis -h
-    - ndmetis -h
-    - gpmetis -h
-    - m2gmetis -h
-    - test -f $PREFIX/include/metis.h
+    - graphchk  # [unix]
+    - cmpfillin -h  # [unix]
+    - mpmetis -h  # [unix]
+    - gpmetis -h  # [unix]
+    - ndmetis -h  # [unix]
+    - gpmetis -h  # [unix]
+    - m2gmetis -h  # [unix]
+    - test -f $PREFIX/include/metis.h  # [unix]
+    - graphchk.exe  # [win]
+    - cmpfillin.exe -h  # [win]
+    - mpmetis.exe -h  # [win]
+    - gpmetis.exe -h  # [win]
+    - ndmetis.exe -h  # [win]
+    - gpmetis.exe -h  # [win]
+    - m2gmetis.exe -h  # [win]
 
 about:
   home: http://glaros.dtc.umn.edu/gkhome/metis/metis/overview
