@@ -10,4 +10,7 @@ cmake ..\.. ^
 
 ECHO VS files have been generated in build\windows
 
-cmake --build . --config Release
+dir
+
+cmake --build . --config Release --target ALL_BUILD
+cmake --build . --config Release --target ZERO_CHECK
