@@ -21,16 +21,18 @@ dir programs\Release
 
 dir libmetis\Release
 
-dir include\Release
+dir include
 
 dir ..\..
 
-move libmetis\Release\libmetis.a %LIBRARY_BIN%
-move programs\Release\cmpfillin %LIBRARY_LIB%
-move programs\Release\gpmetis %LIBRARY_LIB%
-move programs\Release\graphchk %LIBRARY_LIB%
-move programs\Release\m2gmetis %LIBRARY_LIB%
-move programs\Release\ndmetis %LIBRARY_LIB%
-move programs\Release\mpmetis %LIBRARY_LIB%
+move libmetis\Release\metis.lib %LIBRARY_BIN%
+
+move programs\Release\cmpfillin.exe %LIBRARY_LIB%
+move programs\Release\gpmetis.exe %LIBRARY_LIB%
+move programs\Release\graphchk.exe %LIBRARY_LIB%
+move programs\Release\m2gmetis.exe %LIBRARY_LIB%
+move programs\Release\ndmetis.exe %LIBRARY_LIB%
+move programs\Release\mpmetis.exe %LIBRARY_LIB%
+
 move include\Release\metis.h %LIBRARY_INC%
 move include\Release\gklib_tls.h %LIBRARY_INC%
