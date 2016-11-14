@@ -2,7 +2,7 @@ MKDIR build\windows
 CD build\windows
 
 cmake ^
-    -G "%CMAKE_GENERATOR%"                   ^
+    -G "Visual Studio 10"                   ^
 	-DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX%  ^
 	-DCMAKE_INSTALL_BINDIR=%LIBRARY_BIN%     ^
 	-DCMAKE_INSTALL_LIBDIR=%LIBRARY_LIB%     ^
