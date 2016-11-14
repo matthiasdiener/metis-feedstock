@@ -29,6 +29,7 @@ test:
     - gpmetis -h  # [unix]
     - m2gmetis -h  # [unix]
     - test -f $PREFIX/include/metis.h  # [unix]
+    - if not exist "%LIBRARY_BIN%\\metis.lib" exit 1  # [win]
     - if not exist "%LIBRARY_LIB%\\graphchk.exe" exit 1  # [win]
     - if not exist "%LIBRARY_LIB%\\cmpfillin.exe" exit 1  # [win]
     - if not exist "%LIBRARY_LIB%\\mpmetis.exe" exit 1  # [win]
