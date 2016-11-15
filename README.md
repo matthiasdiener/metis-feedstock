@@ -3,7 +3,7 @@ About metis
 
 Home: http://glaros.dtc.umn.edu/gkhome/metis/metis/overview
 
-Package license: Apache License 2.0
+Package license: Apache 2.0
 
 Feedstock license: BSD 3-Clause
 
@@ -36,7 +36,6 @@ It is possible to list all of the versions of `metis` available on your platform
 ```
 conda search metis --channel conda-forge
 ```
-
 
 
 About conda-forge
