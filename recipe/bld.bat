@@ -2,7 +2,7 @@ MKDIR build\windows
 CD build\windows
 
 cmake ^
-    -G "NMake Makefiles"                   ^
+    -G "NMake Makefiles"                     ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX%  ^
     -DCMAKE_INSTALL_BINDIR=%LIBRARY_BIN%     ^
     -DCMAKE_INSTALL_LIBDIR=%LIBRARY_LIB%     ^
@@ -12,6 +12,15 @@ cmake ^
     ..\..
 
 cmake --build . --config Release
+
+dir
+dir libmetis
+dir programs
+dir include
+dir Release
+dir libmetis\Release
+dir programs\Release
+dir include\Release
 
 copy libmetis\Release\metis.lib %LIBRARY_BIN%
 copy programs\Release\cmpfillin.exe %LIBRARY_LIB%
