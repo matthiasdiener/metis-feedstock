@@ -15,24 +15,13 @@ source:
 build:
   number: 3
   binary_relocation: true
-  features:
-    - vc9  # [win and py27]
-    - vc10  # [win and py34]
-    - vc14  # [win and py>=35]
-  skip: true  # [win and py35]
 
 requirements:
   build:
     - cmake
-    - toolchain
-    - python  # [win]
-    - vc 9  # [win and py27]
-    - vc 10  # [win and py34]
-    - vc 14  # [win and py>=35]
+    - {{ compiler('c') }}
+  host:
   run:
-    - vc 9  # [win and py27]
-    - vc 10  # [win and py34]
-    - vc 14  # [win and py>=35]
 
 test:
   commands:
@@ -66,10 +55,10 @@ about:
   license_file: LICENSE.txt
   summary: 'METIS - Serial Graph Partitioning and Fill-reducing Matrix Ordering'
   description: |
-    METIS is a set of serial programs for partitioning graphs, partitioning 
-    finite element meshes, and producing fill reducing orderings for sparse 
-    matrices. The algorithms implemented in METIS are based on the multilevel 
-    recursive-bisection, multilevel k-way, and multi-constraint partitioning 
+    METIS is a set of serial programs for partitioning graphs, partitioning
+    finite element meshes, and producing fill reducing orderings for sparse
+    matrices. The algorithms implemented in METIS are based on the multilevel
+    recursive-bisection, multilevel k-way, and multi-constraint partitioning
     schemes developed in our lab.
   doc_url: http://glaros.dtc.umn.edu/gkhome/metis/metis/faq
 
