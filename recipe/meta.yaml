@@ -12,14 +12,26 @@ source:
   patches:
     - vc14.patch
 
+# While Metis is a pure C library, it is built with cmake, which assumes C++
+# by defaults and attempts to locate the C++ compiler. Hence the recipe has a
+# build dependency on {{ compiler('cxx') }}. The `ignore_run_exports` entry is
+# added so that the package does not depend on the C++ runtime due to the
+# dependency to the C++ compiler.
+#
+# Another fix to this would be to have metis' cmake specify `project(METIS C)`
+# instead of `project(METIS)`.
+
 build:
   number: 1003
   binary_relocation: true
+  ignore_run_exports:        # Cf comment above
+    - {{ compiler('cxx') }}
 
 requirements:
   build:
     - cmake
     - {{ compiler('c') }}
+    - {{ compiler('cxx') }}  # Cf comment above
   host:
   run:
 
@@ -65,3 +77,4 @@ about:
 extra:
   recipe-maintainers:
     - basnijholt
+    - SylvainCorlay
