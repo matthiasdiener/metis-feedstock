@@ -22,7 +22,7 @@ source:
 # instead of `project(METIS)`.
 
 build:
-  number: 1003
+  number: 1004
   binary_relocation: true
   ignore_run_exports:        # Cf comment above
     - {{ compiler('cxx') }}
@@ -30,6 +30,7 @@ build:
 requirements:
   build:
     - cmake
+    - make
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}  # Cf comment above
   host:
