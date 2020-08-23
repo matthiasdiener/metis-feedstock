@@ -5,7 +5,7 @@ Home: http://glaros.dtc.umn.edu/gkhome/metis/metis/overview
 
 Package license: Apache 2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: METIS - Serial Graph Partitioning and Fill-reducing Matrix Ordering
 
@@ -31,7 +31,7 @@ Current build status
     <td>Drone</td>
     <td>
       <a href="https://cloud.drone.io/conda-forge/metis-feedstock">
-        <img alt="linux" src="https://img.shields.io/drone/build/conda-forge/master.svg?label=Linux">
+        <img alt="linux" src="https://img.shields.io/drone/build/conda-forge/metis-feedstock/master.svg?label=Linux">
       </a>
     </td>
   </tr>
@@ -48,10 +48,10 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux</td>
+              <td>linux_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=629&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/metis-feedstock?branchName=master&jobName=linux&configuration=linux_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/metis-feedstock?branchName=master&jobName=linux&configuration=linux_64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -69,24 +69,17 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx</td>
+              <td>osx_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=629&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/metis-feedstock?branchName=master&jobName=osx&configuration=osx_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/metis-feedstock?branchName=master&jobName=osx&configuration=osx_64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_c_compilervs2008cxx_compilervs2008</td>
+              <td>win_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=629&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/metis-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2008cxx_compilervs2008" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_c_compilervs2015cxx_compilervs2015</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=629&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/metis-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2015cxx_compilervs2015" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/metis-feedstock?branchName=master&jobName=win&configuration=win_64_" alt="variant">
                 </a>
               </td>
             </tr>
