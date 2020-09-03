@@ -1,16 +1,14 @@
 {% set name = "metis" %}
-{% set version = "5.1.0" %}
+{% set version = "5.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/{{ name }}-{{ version }}.tar.gz
-  sha256: 76faebe03f6c963127dbb73c13eab58c9a3faeae48779f049066a21c087c5db2
-  patches:
-    - vc14.patch
+  # url: https://github.com/KarypisLab/METIS/archive/{{ version }}.zip
+  url: https://github.com/KarypisLab/METIS/archive/9ac4e275cbe52080b2142d3c4d8f9f8f7738dec1.zip
+  sha256: 45d11905ee4ef99b074873efe7e6d2321fdd1f77e006752a0ef20494d0cd0093
 
 # While Metis is a pure C library, it is built with cmake, which assumes C++
 # by defaults and attempts to locate the C++ compiler. Hence the recipe has a
@@ -36,8 +34,6 @@ requirements:
     - make
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}  # Cf comment above
-  host:
-  run:
 
 test:
   commands:
