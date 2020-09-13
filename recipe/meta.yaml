@@ -1,14 +1,13 @@
 {% set name = "metis" %}
-{% set version = "5.2.0" %}
+{% set version = "5.1.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  # url: https://github.com/KarypisLab/METIS/archive/{{ version }}.zip
-  url: https://github.com/KarypisLab/METIS/archive/9ac4e275cbe52080b2142d3c4d8f9f8f7738dec1.zip
-  sha256: 45d11905ee4ef99b074873efe7e6d2321fdd1f77e006752a0ef20494d0cd0093
+  url: https://github.com/KarypisLab/METIS/archive/v{{ version }}-DistDGL-v0.5.tar.gz
+  sha256: cedf0b32d32a8496bac7eb078b2b8260fb00ddb8d50c27e4082968a01bc33331
 
 # While Metis is a pure C library, it is built with cmake, which assumes C++
 # by defaults and attempts to locate the C++ compiler. Hence the recipe has a
