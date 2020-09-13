@@ -9,6 +9,9 @@ source:
   url: https://github.com/KarypisLab/METIS/archive/v{{ version }}-DistDGL-v0.5.tar.gz
   sha256: cedf0b32d32a8496bac7eb078b2b8260fb00ddb8d50c27e4082968a01bc33331
 
+  patches:
+    - vc14.patch
+
 # While Metis is a pure C library, it is built with cmake, which assumes C++
 # by defaults and attempts to locate the C++ compiler. Hence the recipe has a
 # build dependency on {{ compiler('cxx') }}. The `ignore_run_exports` entry is
