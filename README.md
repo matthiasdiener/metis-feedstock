@@ -5,9 +5,11 @@ Home: http://glaros.dtc.umn.edu/gkhome/metis/metis/overview
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/metis-feedstock/blob/master/LICENSE.txt)
 
 Summary: METIS - Serial Graph Partitioning and Fill-reducing Matrix Ordering
+
+Documentation: http://glaros.dtc.umn.edu/gkhome/metis/metis/faq
 
 METIS is a set of serial programs for partitioning graphs, partitioning
 finite element meshes, and producing fill reducing orderings for sparse
@@ -104,6 +106,7 @@ Installing `metis` from the `conda-forge` channel can be achieved by adding `con
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `metis` can be installed with:
@@ -174,9 +177,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
