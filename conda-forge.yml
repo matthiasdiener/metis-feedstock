@@ -8,4 +8,4 @@ github:
 conda_build:
   pkg_format: '2'
 azure:
-  store_build_artifacts: False
+  store_build_artifacts: true
