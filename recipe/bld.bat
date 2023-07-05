@@ -1,3 +1,5 @@
+setlocal EnableDelayedExpansion
+
 MKDIR build\windows
 CD build\windows
 
@@ -8,7 +10,13 @@ cmake ^
     -DCMAKE_BUILD_TYPE=Release               ^
     ..\..
 
+if errorlevel 1 exit 1 
+
+nmake
+if errorlevel 1 exit 1
+
 cmake --build . --config Release
+if errorlevel 1 exit 1
 
 copy libmetis\metis.lib %LIBRARY_LIB%
 copy programs\cmpfillin.exe %LIBRARY_BIN%
