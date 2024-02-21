@@ -17,6 +17,9 @@ source:
     # missing Windows conditionals
     - patches/rusage-win32.patch
     - patches/msvc-no-libm.patch
+    # remove -march=native, never appropriate on conda-forge,
+    # unavailable on ppc64le 
+    - patches/no-march-native.patch
 
 build:
   number: 0
