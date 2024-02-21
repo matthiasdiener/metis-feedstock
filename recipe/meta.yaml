@@ -14,6 +14,7 @@ source:
     - getprocvmpeak.diff
     # https://github.com/KarypisLab/METIS/pull/52
     - patches/pr52.patch
+    - patches/rusage-win32.patch
 
 build:
   number: 0

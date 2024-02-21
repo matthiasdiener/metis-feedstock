@@ -1,0 +1,25 @@
+From 349869f54eac8965299ed2ea89a46fefd16fb48b Mon Sep 17 00:00:00 2001
+From: Min RK <benjaminrk@gmail.com>
+Date: Wed, 21 Feb 2024 12:50:44 +0100
+Subject: [PATCH] skip undefined rusage on Windows
+
+---
+ programs/gpmetis.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/programs/gpmetis.c b/programs/gpmetis.c
+index 4b7e0b5..ac01a41 100644
+--- a/programs/gpmetis.c
++++ b/programs/gpmetis.c
+@@ -239,7 +239,7 @@ void GPReportResults(params_t *params, graph_t *graph, idx_t *part, idx_t objval
+   printf("\nMemory Information ----------------------------------------------------------\n");
+   printf("  Max memory used:\t\t %7.3"PRREAL" MB\n", (real_t)(params->maxmemory/(1024.0*1024.0)));
+ 
+-#ifndef MACOS
++#if !(defined(MACOS) || defined(WIN32))
+   {
+     struct rusage usage;
+     getrusage(RUSAGE_SELF, &usage);
+-- 
+2.42.0
+
