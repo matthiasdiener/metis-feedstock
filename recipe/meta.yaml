@@ -14,7 +14,9 @@ source:
     - getprocvmpeak.diff
     # https://github.com/KarypisLab/METIS/pull/52
     - patches/pr52.patch
+    # missing Windows conditionals
     - patches/rusage-win32.patch
+    - patches/msvc-no-libm.patch
 
 build:
   number: 0
