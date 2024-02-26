@@ -11,7 +11,7 @@ source:
   patches:
     - patches/0004-uncomment-width-variables.patch  # [win]
     # See https://github.com/KarypisLab/METIS/issues/54:
-    - getprocvmpeak.diff
+    - patches/getprocvmpeak.diff
     # https://github.com/KarypisLab/METIS/pull/52
     - patches/pr52.patch
     # missing Windows conditionals
